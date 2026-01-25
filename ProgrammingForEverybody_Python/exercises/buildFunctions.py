@@ -10,7 +10,7 @@ Do not worry about error checking the user input unless you want to - you can as
 Do not name your variable sum or use the sum() function.
 """
 
-def computery(h, r):
+def computepay(h, r):
     if h <= 40:
         return h * r
     else:
@@ -26,4 +26,4 @@ except:
     print("Invalid input")
     exit()
 
-print("Pay: ", computery(hrs, rate))
+print("Pay", computepay(hrs, rate))
