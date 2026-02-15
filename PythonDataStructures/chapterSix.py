@@ -123,3 +123,111 @@ b = a + 'There'
 print(b)        #HelloThere
 c = a + ' ' + 'There'
 print(c)        #Hello There
+
+#Using in as a Logical Operator
+"""
+- The in keyword can also be used to check to see if one string is "in" another string
+- The in expression is a logical expression that return True or False and can be used in an if statement
+"""
+
+fruit = "banana"
+'nan' in fruit
+if 'a' in fruit:
+    print('Found it!') 
+
+#String Comperison
+if word == 'banana':
+    print('All right, bananas.')
+
+if word < 'banana':
+    print('Your word, ' + word + ', comes before banana.')
+elif word > 'banana':
+    print('Your word, ' + word + ', comes after banana.')
+else:
+    print('All right, bananas.')
+
+#String Library
+"""
+- Python has a number of string functions which are in the string library
+- These functions are already built into every string - we invoke them by appending the function to the string variable
+- These functions do not modify the original string, instead they return a new string that has been altered
+"""
+greet = "Hello Bob"
+zap = greet.lower()
+print(zap)
+print('Hi There'.lower())
+
+stuff = 'Hello world'
+print(type(stuff))
+"""<class 'str'>"""
+print(dir(stuff))
+"""methods in the class str"""
+
+"""
+String Library
+str.capitalize()
+str.center(width[, fillchar])
+str.endswith(suffix[, start[, end]])
+str.find(sub[, start[, end]])
+str.lstrip([chars])
+str.replace(old, new[, count])
+str.lower()
+str.rstrip([chars])
+str.strip([chars])
+str.upper()
+"""
+
+#Searching a String
+"""
+- We use the find() function to search for a substring within another string
+- find() finds the first occurrence of the substring
+- If the substring is not found, find() returns -1
+- Remember that string position starts at zero
+"""
+fruit = 'banana'
+pos = fruit.find('na')
+print(pos)
+aa = fruit.find('z')
+print(aa)
+
+#Making Everything Upper Case
+"""
+- You can make a copy of a string in lower or upper case
+- Often when we are searching for a string using find() we first convert the string to lower case so we can search a string regardless of case
+"""
+great = 'Hello Bob'
+print(great.upper())
+
+#Search and Replace
+"""
+- The replace() function is like a 'search and replace' operation in a word processor
+- It replaces all occurrences of the search string with the replacement string 
+"""
+great = 'Hello Bob'
+nstr = great.replace('Bob', 'Jane')
+print(nstr)
+
+# Stripping Whitespace
+"""
+- Sometimes we want to take a string and remove whitespace at the beginning and/or end
+- lstrip() and rstrip() remove whitespace at the left or right
+- strip() removes both beginning and ending whitespace
+"""
+greet = '   Hello Bob  '
+print(greet.lstrip())
+print(greet.rstrip())
+print(greet.strip())
+
+#Prefixes
+line = 'Please have a nice day'
+print(line.startswith('Please'))
+print(line.startswith('p'))
+
+#Parsing and Extracting
+data = 'From stephen.maruduard@uct.ac.za Sat Jan 5 09:14:16 2008'
+atpos = data.find('@')
+print(atpos)
+sppos = data.find(' ', atpos)
+print(sppos)
+host = data[atpos + 1 : sppos]
+print(host)
