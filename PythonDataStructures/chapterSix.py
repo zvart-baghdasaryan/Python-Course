@@ -231,3 +231,5 @@ sppos = data.find(' ', atpos)
 print(sppos)
 host = data[atpos + 1 : sppos]
 print(host)
+
+"In Python 3, all strings are Unicode"
