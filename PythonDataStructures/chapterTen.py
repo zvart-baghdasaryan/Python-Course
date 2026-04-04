@@ -92,6 +92,3 @@ print(tmp)
 List comprehension create a dynamic list. In this case, we make a list of reversed tuples and then sort it.
 """
 print(sorted([ (v, k) for k,v in c.items() ]))
-
-x, y = 3, 4
-print(y)
